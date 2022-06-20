@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="otchet" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="906b1b63-5a0b-4490-8a14-722d409049dd">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="xPath">
+		<![CDATA[/team/player]]>
+	</queryString>
+	<field name="lastname" class="java.lang.String">
+		<fieldDescription><![CDATA[@lastname]]></fieldDescription>
+	</field>
+	<field name="name" class="java.lang.String">
+		<fieldDescription><![CDATA[@name]]></fieldDescription>
+	</field>
+	<field name="specialization" class="java.lang.String">
+		<fieldDescription><![CDATA[@specialization]]></fieldDescription>
+	</field>
+	<field name="team" class="java.lang.String">
+		<fieldDescription><![CDATA[@team]]></fieldDescription>
+	</field>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="34f30c37-0747-46dd-b60a-cf11563fd2b0"/>
+				<staticText>
+					<reportElement x="20" y="20" width="234" height="43" forecolor="#FFFFFF" uuid="6686f8a2-b005-4109-8ff9-de06f208a7f9"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Report]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="395" y="43" width="180" height="20" forecolor="#FFFFFF" uuid="6dcab870-f5d9-49b5-a7f4-458a872d1cc4"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[about players]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="1" width="143" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="9400976c-7604-477c-869f-e9a444b4c966"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Команда]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="143" y="1" width="138" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="c4280dc3-bada-458a-a495-90a410bc0892"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Имя]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="281" y="1" width="138" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="2802c5f8-f3f3-41c1-bb5f-ff8cf5d9f15e"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Фамилия]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="419" y="1" width="136" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="16942a40-2711-4d9b-b4da-2da31a8ffda6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Специализация]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="f377a1e8-5327-4813-aab5-78d0849cf622"/>
+			</line>
+			<textField>
+				<reportElement x="281" y="0" width="138" height="20" uuid="68ada1be-a180-4d9d-bf23-6ae7a96aa40f"/>
+				<textFieldExpression><![CDATA[$F{lastname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="143" y="0" width="138" height="20" uuid="45f01437-06b1-4b94-8e98-26333da92cf0"/>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="419" y="0" width="136" height="20" uuid="ff063dd6-d7b5-46c8-9611-d69aca54bb10"/>
+				<textFieldExpression><![CDATA[$F{specialization}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="143" height="20" uuid="acf12a16-4e9b-49e1-ace2-f6b9cdfe0cf7"/>
+				<textFieldExpression><![CDATA[$F{team}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="18">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="5739ae50-4bb2-4fc2-b224-0dea7fcf042c"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="180a378e-ad8b-4458-92ab-4370099e926c"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="7c0f06d9-8e25-438a-9a4c-3b379452298d"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

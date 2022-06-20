@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<team>
+<player team="Team RFR" name="Михаил" lastname="Сергеев" number="17"/>
+<player team="MClaren" name="Стоффель" lastname="Вандорн" number="9"/>
+<player team="Team RFR" name="Антон" lastname="Куреев" number="22"/>
+<player team="Team RFR" name="Павел" lastname="Карташов" number="32"/>
+<player team="MClaren" name="Артем" lastname="Артемов" number="4"/>
+<player team="MClaren" name="Михайло" lastname="Мишин" number="1"/>
+<player team="MClaren" name="Александро" lastname="Соничев" number="21"/>
+<player team="MClaren" name="Педро" lastname="Шульск" number="33"/>
+</team>
